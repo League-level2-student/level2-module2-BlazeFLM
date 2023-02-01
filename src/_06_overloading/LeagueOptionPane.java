@@ -21,12 +21,21 @@ public class LeagueOptionPane {
 	public static void showMessageDialog(String message) {
 		// 1. Open example.png and make a GUI that looks like that
 		//    The message parameter is what we want to show on our pop-up
-	JFrame frame = new JFrame();
-	JPanel panel = new JPanel();
-	JLabel label = new JLabel();
-	
+		JFrame frame = new JFrame();
+		JPanel panel = new JPanel();
+		JLabel label = new JLabel();
+		JLabel image = new JLabel();
+			
+			frame.setVisible(true);
+			panel.add(image);
+			panel.add(label);
+			label.setText(message);
+			image.setIcon(loadImage("league.png"));
+			frame.add(panel);
+			
 		// 2. Uncomment the line of code below. It sets the location of our frame to the center of the screen
-		frame.setLocationRelativeTo(null);
+			frame.setLocationRelativeTo(null);
+			frame.setSize(100,100);	
 	}
 	
 	// 3. Call this method in the Runner class
@@ -34,28 +43,46 @@ public class LeagueOptionPane {
 
 	// 4. Create another showMessageDialog() method that lets us also choose the Message and Title 
 	//    2 String parameters (one for the message and one for the title)
-	JFrame howMessageDialog(String message, String title) {
-		JFrame fr = new JFrame();
-		fr.setTitle(title);
-		JLabel msg = new JLabel();
-		msg.setText(message);
-		fr.add(msg);
-		fr.setVisible(true);
-		return fr;
+	public static void showMessageDialog(String message, String title) {
+		JFrame frame = new JFrame();
+		JPanel panel = new JPanel();
+		JLabel label = new JLabel();
+		JLabel image = new JLabel();
+			
+			
+			frame.setVisible(true);
+			panel.add(image);
+			panel.add(label);
+			label.setText(message);
+			image.setIcon(loadImage("league.png"));
+			frame.setTitle(title);
+			label.setText(message);
+			frame.add(panel);
+			frame.setLocationRelativeTo(null);
+			frame.setSize(100,100);	
 	}
 	// 5. Call this method in the Runner class
 	
 	
 	// 6. Create another showMessageDialog() method that lets us choose the Message, Title, and Image
 	//    3 String parameters (one for the message, one for the title, and one for the fileName)
-	JFrame showMessageDialog(String message, String title, String fileName) {
-		JFrame fr = new JFrame();
-		fr.setTitle(title);
-		JLabel msg = new JLabel();
-		msg.setText(message);
-		fr.add(msg);
-		fr.setVisible(true);
-		return fr;
+	public static void showMessageDialog(String message, String title, String fileName) {
+		JFrame frame = new JFrame();
+		JPanel panel = new JPanel();
+		JLabel label = new JLabel();
+		JLabel image = new JLabel();
+	
+			frame.setVisible(true);
+			panel.add(image);
+			panel.add(label);
+			label.setText(message);
+			image.setIcon(loadImage(fileName));
+			frame.setTitle(title);
+			label.setText(message);
+			frame.add(panel);
+
+			frame.setLocationRelativeTo(null);
+			frame.setSize(100,100);	
 	}
 	// 7. Call this method in the Runner class
 	

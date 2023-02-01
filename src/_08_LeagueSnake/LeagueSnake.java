@@ -11,8 +11,9 @@ public class LeagueSnake extends PApplet {
      * 
      * Put all the game variables here.
      */
-    
-
+    Segment head;
+    int foodX;
+    int foodY;
     
     /*
      * Setup methods
@@ -21,12 +22,12 @@ public class LeagueSnake extends PApplet {
      */
     @Override
     public void settings() {
-        
+        size(500,500);
     }
 
     @Override
     public void setup() {
-        
+       // Segment head = new Segment();
     }
 
     void dropFood() {
